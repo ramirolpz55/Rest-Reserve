@@ -11,55 +11,58 @@
 		<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
 	</head>
 	<body>
-		<!-- Navbar -->
-		<nav class="navbar navbar-default" role="navigation">
-			<div class="container">
-				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="#">Title</a>
-				</div>
-
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse" id="nav1">
-					<ul class="nav navbar-nav">
-						<li class="active"><a href="#">Link</a></li>
-						<li><a href="#">Link</a></li>
-					</ul>
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#">Link</a></li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-							<ul class="dropdown-menu">
-								<li><a href="#">Action</a></li>
-								<li><a href="#">Another action</a></li>
-								<li><a href="#">Something else here</a></li>
-								<li><a href="#">Separated link</a></li>
-							</ul>
-						</li>
-					</ul>
-				</div><!-- /.navbar-collapse -->
-			</div>
-		</nav>
 
 		<!-- Body -->
 <div class="container">
-<div class="jumbotron">
-
-
-		<h1><span class="glyphicon glyphicon-fire" aria-hidden="true"></span>Hot Restaurant</h1>
-		<h2>Make your Reservation</h2>
-		<p>
+	<div class="jumbotron">
+		<h1 class="text-center">
+			<span class="glyphicon glyphicon-fire"></span> Hot Restaurant</h1>
+		<h2 class="text-center">Make your Reservation</h2>
+		<div class="text-center">
 			<a class="btn btn-primary btn-lg">View Tables</a>
-			<button type="button" class="btn btn-danger btn-lg">button</button>
-			<a class="btn btn-primary btn-lg">Home</a>
-			<button type="button" class="btn btn-danger btn-lg">button</button>
-		</p>
+			<button type="button" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-home"></span></button>
+		</div>
+	</div>
+
+
+
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="panel panel-default">
+				<div class= "panel-heading">
+					<h4 class="panel-title">Table Reservation </h4>
+				</div>
+
+			<div class="panel-body">
+
+				<form role="form">
+
+					<div class="form-group">
+							<label for="">Name</label>
+							<input type="text" class="form-control" id="reserve_name">
+					</div>
+
+					<div class="form-group">
+							<label for="">Phone number</label>
+							<input type="text" class="form-control" id="reserve_name">
+					</div>
+
+					<div class="form-group">
+							<label for="">Email</label>
+							<input type="text" class="form-control" id="reserve_name">
+					</div>
+
+					<div class="form-group">
+							<label for="">Unique ID</label>
+							<input type="text" class="form-control" id="reserve_name">
+					</div>
+
+					<button type="submit" class="btn btn-primary submit">Submit</button>
+				</form>
+
+			</div>
+
+			</div>
 	</div>
 </div>
 
