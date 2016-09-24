@@ -22,7 +22,7 @@
 
 			<a href="/tables" class="btn btn-primary btn-lg">View Tables</a>
 
-			<a href="/home" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-home"></span> </a>
+			<a href="/" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-home"></span> </a>
 		</div>
 	</div>
 
@@ -44,17 +44,17 @@
 
 					<div class="form-group">
 							<label for="">Phone number</label>
-							<input type="text" class="form-control" id="reserve_name">
+							<input type="text" class="form-control" id="reserve_phone">
 					</div>
 
 					<div class="form-group">
 							<label for="">Email</label>
-							<input type="text" class="form-control" id="reserve_name">
+							<input type="text" class="form-control" id="reserve_email">
 					</div>
 
 					<div class="form-group">
 							<label for="">Unique ID</label>
-							<input type="text" class="form-control" id="reserve_name">
+							<input type="text" class="form-control" id="reserve_identifier">
 					</div>
 
 					<button type="submit" class="btn btn-primary submit">Submit</button>
@@ -83,5 +83,32 @@
 
 		<script src="assets/js/jquery-3.1.0.js"></script>
 		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="text/javascript">
+		var settings = {
+			"async": true,
+			"crossDomain": true,
+			"url": "http://localhost:3000/api/new",
+			"method": "POST",
+			"headers": {
+				"content-type": "application/json",
+				"cache-control": "no-cache",
+				"postman-token": "45368965-c45e-0676-9e9f-8f01d810cbc8"
+			},
+
+			"processData": false,
+			"data": {
+    	"customerName": "Jonathan Arellano",
+    	"phoneNumber": "455-343-4344",
+    	"customerEmail": "NeverHacked@yahoo.com",
+    	"customerID": "44953"
+  		}"
+		};
+
+$.ajax(settings).done(function (response) {
+console.log(response);
+
+
+});
+		</script>
 	</body>
 </html>
