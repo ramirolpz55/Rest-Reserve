@@ -71,13 +71,13 @@
                 "postman-token": "0331fe4d-704c-6001-dea2-7170c4a20ef3"
             }
         }
-
+        var text;
         $.ajax(settings).done(function(response) {
-        	var newObj = $("<div>" + response);
-        	for (i = 0; i < response.length; i++) { 
-			    text += response[i] + "<br>";
-			}
-        	$('#reservation').html(response);
+        	
+        	for (var i = Things.length - 1; i >= 0; i--) {
+        		Things[i]
+        	}
+        	$('#reservation').html(text);
             console.log(response);
             	
 
