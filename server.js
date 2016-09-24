@@ -53,13 +53,46 @@ app.get('/table', function(req, res) {
 });
 
 app.get('/api/waitlist', function(req, res) {
-    res.json(reservations);
+    var waitlist = [];
+    if (reservations.length == 4) {
+        res.json([]);
+    } else {
+        for (var i = 5; i < reservations.length; i++) {
+            waitlist.push(reservations[i])
+        }
+
+        res.json(waitlist);
+    }
+
+});
+
+app.get('/api/currentreservations', function(req, res) {
+    var curReservations = [];
+    if (reservations.length == 4) {
+        res.json(reservations);
+    } else {
+        for (var i = 0; i < 5; i++) {
+            curReservations.push(reservations[i])
+        }
+
+        res.json(curReservations);
+    }
+
 });
 
 app.get('/api/tables', function(req, res) {
     res.json(reservations);
 });
 
-app.listen(PORT, function(){
-	console.log("App listening on PORT: " + PORT);
+app.post('/api/new', function(req, res) {
+    var newReservation = req.body;
+    reservations.push(newReservation);
+
+    res.json(reservations);
+})
+
+
+//start server
+app.listen(PORT, function() {
+    console.log("App listening on PORT: " + PORT);
 })
