@@ -31,19 +31,18 @@
                 <h5>Current Reservations</h5> </div>
             <div class="panel-body">
                 <div class="well">
-                    <h2><span class="label label-primary">1</span>| Guest One</h2>
+                    <h2 id="reservation"><span class="label label-primary">1</span>| Guest One</h2>
                 </div>
             </div>
         </div>
         <div class="panel panel-default">
-            <div class="panel-heading">
-                <h5>Waitlist</h5> </div>
+            
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h5>Waiting List</h5> </div>
                 <div class="panel-body">
                     <div class="well">
-                        <h2><span class="label label-primary">1</span>| Guest One</h2>
+                        <h2 id="wait"><span class="label label-primary">1</span>| Guest One</h2>
                     </div>
                 </div>
             </div>
@@ -74,26 +73,33 @@
         }
 
         $.ajax(settings).done(function(response) {
+        	var newObj = $("<div>" + response);
+        	for (i = 0; i < response.length; i++) { 
+			    text += response[i] + "<br>";
+			}
+        	$('#reservation').html(response);
             console.log(response);
+            	
+
         });
 
         //wait list json
 
-        var settings = {
+        var settings2 = {
   "async": true,
   "crossDomain": true,
   "url": "http://localhost:3000/api/waitlist",
   "method": "GET",
   "headers": {
     "cache-control": "no-cache",
-    "postman-token": "0331fe4d-704c-6001-dea2-7170c4a20ef3"
+    "postman-token": "23bc9a71-c49f-8b4d-fc0f-c5008668726a"
   }
 }
 
-$.ajax(settings).done(function (response) {
+$.ajax(settings2).done(function (response) {
+	$('#wait').html(response);
   console.log(response);
 });
-
 
 
         </script>
