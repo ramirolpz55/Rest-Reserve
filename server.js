@@ -14,6 +14,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
+app.use('/assets', express.static(__dirname + '/assets'));
 
 // Star Wars Characters (DATA)
 
@@ -39,17 +40,19 @@ var reservations = [{
     customerID: "4234"
 }];
 
+
+
 //Routes
 app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname, 'home.html'));
+    res.sendFile(path.join(__dirname, 'Views/home.html'));
 });
 
-app.get('/reserve', function(req, res) {
-    res.sendFile(path.join(__dirname, 'reserve.html'));
+app.get('Views/reserve', function(req, res) {
+    res.sendFile(path.join(__dirname, 'Views/reserve.html'));
 });
 
-app.get('/tables', function(req, res) {
-    res.sendFile(path.join(__dirname, 'tables.html'));
+app.get('Views/tables', function(req, res) {
+    res.sendFile(path.join(__dirname, 'Views/tables.html'));
 });
 
 app.get('/api/waitlist', function(req, res) {
