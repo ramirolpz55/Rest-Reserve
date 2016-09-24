@@ -47,11 +47,11 @@ app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, 'Views/home.html'));
 });
 
-app.get('Views/reserve', function(req, res) {
+app.get('/reserve', function(req, res) {
     res.sendFile(path.join(__dirname, 'Views/reserve.html'));
 });
 
-app.get('Views/tables', function(req, res) {
+app.get('/tables', function(req, res) {
     res.sendFile(path.join(__dirname, 'Views/tables.html'));
 });
 
