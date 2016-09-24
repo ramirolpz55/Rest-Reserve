@@ -44,20 +44,20 @@
 
 					<div class="form-group">
 							<label for="">Phone number</label>
-							<input type="text" class="form-control" id="reserve_name">
+							<input type="text" class="form-control" id="reserve_phone">
 					</div>
 
 					<div class="form-group">
 							<label for="">Email</label>
-							<input type="text" class="form-control" id="reserve_name">
+							<input type="text" class="form-control" id="reserve_email">
 					</div>
 
 					<div class="form-group">
 							<label for="">Unique ID</label>
-							<input type="text" class="form-control" id="reserve_name">
+							<input type="text" class="form-control" id="reserve_identifier">
 					</div>
 
-					<button type="submit" class="btn btn-primary submit">Submit</button>
+					<button type="submit" class="btn btn-primary submit" id="submitbtn">Submit</button>
 				</form>
 
 			</div>
@@ -83,5 +83,37 @@
 
 		<script src="assets/js/jquery-3.1.0.js"></script>
 		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="text/javascript">
+		var settings = {
+  	"async": true,
+  	"crossDomain": true,
+  	"url": "http://localhost:3000/api/new",
+  	"method": "POST",
+  	"headers": {
+    "content-type": "application/json",
+    "cache-control": "no-cache",
+    "postman-token": "271ff076-8fa2-e798-6699-d3491cef1d20"
+  	},
+  	"processData": false,
+  	"data": "{\n    \"customerName\": \"Jonathan Arellano\",\n    \"phoneNumber\": \"455-343-4344\",\n    \"customerEmail\": \"NeverHacked@yahoo.com\",\n    \"customerID\": \"44953\"\n  }"
+		}
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+
+		function displayGuests() {
+			var guestName = $("#reserve_name").val();
+			var guestNumber = $("#reserve_number").val();
+			var guestEmail = $("#reserve_number").val();
+			var guestIdentifier = $("#reserve_identifier").val();
+
+			$("#submitbtn").click(function(){
+				alert("Thank you for your reservation!");
+			});
+		}
+
+});
+
+		</script>
 	</body>
 </html>

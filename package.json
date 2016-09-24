@@ -4,7 +4,8 @@
   "description": "Today you will be building a `Node` / `Express` based web applications for handling reservation requests.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
