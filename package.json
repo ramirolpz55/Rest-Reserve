@@ -1,0 +1,20 @@
+{
+  "name": "Rest-Reserve",
+  "version": "1.0.0",
+  "description": "Today you will be building a `Node` / `Express` based web applications for handling reservation requests.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ramirolpz55/Rest-Reserve.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ramirolpz55/Rest-Reserve/issues"
+  },
+  "homepage": "https://github.com/ramirolpz55/Rest-Reserve#readme"
+}
